@@ -47,13 +47,15 @@ app.get("/export", function(request, response, next){
  });
  
 
+ app.listen(PORT, () => {
+    console.log(`server started on port ${PORT}`);
+  });
 
 
-
-app.listen(3000, function(){
-    console.log("App listening on port 3000");
-    connection.connect(function(err){
-        if(err) throw err;
-        console.log("Database connected!");
-    })
-})
+// app.listen(3000, function(){
+//     console.log("App listening on port 3000");
+//     connection.connect(function(err){
+//         if(err) throw err;
+//         console.log("Database connected!");
+//     })
+// })
